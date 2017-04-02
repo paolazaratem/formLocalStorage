@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-navbar color="danger">
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <form (ngSubmit)="saveForm()">
+    <ion-list>
+      <ion-item>
+        <ion-label>Name</ion-label>
+        <ion-input type="text" [(ngModel)]="todo.name" name="name"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Age</ion-label>
+        <ion-input type="number" [(ngModel)]="todo.age" name="age"></ion-input>
+      </ion-item>
+    </ion-list>
+
+    <div padding>
+      <button ion-button color="danger" block>Submit</button>
+    </div>
+  </form>
+  <button ion-button color="danger" (click)="getvalueFields()" block>Show values</button>
+</ion-content>
+  
+
